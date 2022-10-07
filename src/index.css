@@ -1,13 +1,342 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent linear-gradient(241deg, #ffffff 0%, #e8e8e8 100%) 0%
+    0% no-repeat padding-box;
+}
+
+/* hide ms edge password icone*/
+::-ms-reveal {
+  display: none !important;
+}
+
+/*********************/
+/**ROOT VARIABLES**/
+/*******************/
+:root {
+  /* core color */
+  --clr-black: #000000;
+  --clr-dark-gray: #595959;
+  --clr-mid-gray: #8f8f8f;
+  --clr-white: #ffffff;
+  --clr-orange: #ff7900;
+  --clr-gayish-orange: #f16e00;
+  --clr-light-gray: #d6d6d6;
+
+  /* accent color */
+  --clr-accent-100: #eeeeee;
+  --clr-accent-125: #f2f2f2;
+  --clr-accent-200: #dddddd;
+  --clr-accent-250: #eaeaea;
+  --clr-accent-300: #cccccc;
+  --clr-accent-400: #999999;
+  --clr-accent-450: #717171;
+  --clr-accent-500: #666666;
+  --clr-accent-600: #333333;
+  --clr-accent-700: #f2f2f2;
+
+  /* complementary color*/
+  --clr-blue: #4bb4e6;
+  --clr-green: #50be87;
+  --clr-pink: #ffb4e6;
+  --clr-purple: #a885d8;
+  --clr-yellow: #ffd200;
+
+  /* font size */
+  --fs-14: 0.7778rem;
+  --fs-16: 0.8889rem;
+  --fs-18: 1rem;
+  --fs-20: 1.1111rem;
+  --fs-24: 1.3333rem;
+  --fs-30: 1.6667rem;
+  --fs-34: 1.8889rem;
+  --fs-40: 2.2222rem;
+  --fs-50: 2.7778rem;
+  --fs-60: 3.3333rem;
+
+  /* font family */
+  --ff-primary: "";
+
+  /* font weight */
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* spacing */
+  --spacing-none: 0;
+  --spacing-5: 0.312rem;
+  --spacing-7: 0.4375rem;
+  --spacing-8: 0.75rem;
+  --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-15: 0.9375rem;
+  --spacing-16: 1rem;
+  --spacing-18: 1.125rem;
+  --spacing-20: 1.25rem;
+  --spacing-25: 1.5625rem;
+  --spacing-30: 1.875rem;
+  --spacing-35: 2.1875rem;
+  --spacing-40: 2.5rem;
+  --spacing-45: 2.8125rem;
+  --spacing-50: 3.125rem;
+  --spacing-52: 3.21rem;
+  --spacing-55: 3.4375rem;
+  --spacing-60: 3.75rem;
+  --spacing-94: 5.875rem;
+  --spacing-96: 5.8675rem;
+
+  /* device breackpoints */
+  --sm: 320px;
+  --md: 768px;
+  --large: 1280px;
+  --extra-larg: 1440px;
+}
+
+/*********************/
+/***UTILITY CLASESS****/
+/*******************/
+
+/* ------------------------------- */
+/* TEXT COLOR                     */
+/* ----------------------------- */
+.fs-14 {
+  font-size: var(--fs-14);
+}
+.fs-16 {
+  font-size: var(--fs-16);
+}
+.fs-18 {
+  font-size: var(--fs-18);
+}
+.fs-20 {
+  font-size: var(--fs-20);
+}
+.fs-24 {
+  font-size: var(--fs-24);
+}
+.fs-30 {
+  font-size: var(--fs-30);
+}
+.fs-34 {
+  font-size: var(--fs-34);
+}
+.fs-40 {
+  font-size: var(--fs-40);
+}
+.fs-50 {
+  font-size: var(--fs-50);
+}
+.fs-60 {
+  font-size: var(--fs-60);
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/* TEXT COLOR                     */
+/* ----------------------------- */
+.text-orange {
+  color: var(--clr-orange);
+}
+.text-black {
+  color: var(--clr-black);
+}
+.text-white {
+  color: var(--clr-white);
+}
+.text-100 {
+  color: var(--clr-accent-100);
+}
+.text-200 {
+  color: var(--clr-accent-200);
+}
+.text-250 {
+  color: var(--clr-accent-250);
+}
+.text-300 {
+  color: var(--clr-accent-300);
+}
+.text-400 {
+  color: var(--clr-accent-400);
+}
+.text-450 {
+  color: var(--clr-accent-450);
+}
+.text-500 {
+  color: var(--clr-accent-500);
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/* TEXT ALIGNEMENT                */
+/* ----------------------------- */
+.text-center {
+  text-align: center !important;
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/* TEXT SPACING                   */
+/* ----------------------------- */
+.line-height-21 {
+  line-height: 1.3125rem;
+}
+.line-height-22 {
+  line-height: 1.375rem;
+}
+.line-height-30 {
+  line-height: 1.875rem;
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/*TEXT WEIGHT                     */
+/* ----------------------------- */
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+.fw-500 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+.fw-bold {
+  font-weight: bold;
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/* BACKGROUND COLOR               */
+/* ----------------------------- */
+.bg-black {
+  background-color: var(--clr-black);
+}
+.bg-white {
+  background-color: var(--clr-white);
+}
+.bg-orange {
+  background-color: var(--clr-orange);
+}
+.bg-light-gray {
+  background-color: var(--clr-light-gray);
+}
+.bg-200 {
+  background-color: var(--clr-accent-200);
+}
+.bg-linear-black-white {
+  background: transparent linear-gradient(228deg, #00000000 0%, #000000 100%) 0%
+    0% no-repeat padding-box;
+}
+.bg-accent-125 {
+  background-color: var(--clr-accent-125);
+}
+.bg-accent-150 {
+  background-color: #f4f4f4;
+}
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+.bg-accent-250 {
+  background-color: var(--clr-accent-250);
+}
+.bg-accent-300 {
+  background-color: var(--clr-accent-300);
+}
+.bg-accent-400 {
+  background-color: var(--clr-accent-200);
+}
+.bg-accent-500 {
+  background-color: var(--clr-accent-500);
+}
+.bg-accent-700 {
+  background-color: var(--clr-accent-700);
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/* SPACING                        */
+/* ----------------------------- */
+
+/* ----------------------------- */
+
+/* ------------------------------- */
+/* DISPLAY LAYOUT                 */
+/* ----------------------------- */
+/* flex */
+.flex,
+.flex-col {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-rigth {
+  justify-content: end;
+}
+.items-center {
+  align-items: center;
+}
+
+/* grid */
+.grid {
+  display: grid;
+}
+/* ----------------------------- */
+
+/* ------------------------------- */
+/*BOX SIZING                      */
+/* ----------------------------- */
+.w-content {
+  width: max-content;
+}
+.h-content {
+  height: max-content;
+}
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100vh;
+}
+
+.h-100 {
+  height: 100vh;
+}
+/* ----------------------------- */
+
+/* RESPONSIVE */
+@media screen and (max-width: 460px) {
+}
+
+/* ----------------------------- */
+/* Page specific background      */
+/* ----------------------------- */
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
